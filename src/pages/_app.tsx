@@ -3,8 +3,11 @@ import type { NextPage } from "next";
 import React from "react";
 import Script from "next/script";
 import "./../styles/globals.css";
+import { Provider } from "react-redux";
 
 import Head from "next/head";
+
+import { store } from "@/configs/store";
 
 interface AppProps {
   Component: NextPage;
@@ -36,9 +39,9 @@ const App = (props: AppProps) => {
         <meta name="application-name" />
         <meta name="theme-color" content="timecolor" />
       </Head>
-
+    <Provider store={store}>
       <Component {...defaultProps} />
-      <Script src="./js/script.js" />
+      </Provider>
     </>
   );
 };

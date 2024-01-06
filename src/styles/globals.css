@@ -49,6 +49,10 @@ body {
   cursor: pointer;
 }
 
+.active{
+  background-image:linear-gradient(#e65895, #bc6be8);
+}
+
 .question {
   text-align: center;
   color: var(--blanc-sombre);
